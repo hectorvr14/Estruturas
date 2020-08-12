@@ -16,7 +16,7 @@
 \usepackage{xstring}
 \usepackage{cancel} %--Riscar elementos
 \usepackage{multicol}%--Distribución en columnas
-\usepackage{fix-cm} %--Cambiar o tamaño de letra como me salga do carallo
+\usepackage{fix-cm} %--Cambiar o tamaño de letra
 \usepackage{geometry}
 
  \geometry{
@@ -201,137 +201,6 @@
 %%%-------------------------------------EMPEZAMOS O DOCUMENTO-------------------------------------%%%
 
 \begin{document}
-
-%-----------------------------------PÁXINA DO TÍTULO--------------------------------%
-
-\thispagestyle{empty}
-
-\begin{tikzpicture}[overlay,remember picture]
-
-% Background color
-\fill[
-black!2]
-(current page.south west) rectangle (current page.north east);
-
-% Rectangles
-\shade[
-left color=Magenta, 
-right color=Magenta!40,
-transform canvas ={rotate around ={45:($(current page.north west)+(0,-6)$)}}] 
-($(current page.north west)+(0,-6)$) rectangle ++(9,1.5);
-
-\shade[
-left color=classicrose,
-right color=classicrose!50,
-rounded corners=0.75cm,
-transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
-($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
-
-\shade[
-left color=magenta,
-rounded corners=0.3cm,
-transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
-
-\shade[
-left color=fashionfuchsia!80,
-right color=fashionfuchsia!60,
-rounded corners=0.4cm,
-transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
-($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
-
-\shade[
-left color=deeppink!80,
-right color=deeppink!80,
-rounded corners=0.9cm,
-transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
-
-\shade[
-left color=magenta,
-right color=classicrose,
-rounded corners=0.9cm,
-transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
-($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
-
-\shade[
-left color=deeppink,
-right color=classicrose,
-rounded corners=0.75cm,
-transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}}]
-($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
-
-\shade[
-left color=pink,
-rounded corners=0.3cm,
-transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}}]
-($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
-
-\shade[
-left color=magenta,
-rounded corners=0.4cm,
-transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}}]
-($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
-
-\shade[
-left color=deeppink,
-right color=red!80,
-rounded corners=0.6cm,
-transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}] 
-($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
-
-% Year
-\draw[ultra thick,gray]
-($(current page.center)+(2,-3)$) -- ++(0,-3cm) 
-node[
-midway,
-left=1cm,
-text width=10cm,
-align=right,
-black!75
-]
-{
-{\fontsize{45}{60} \selectfont \bf Estruturas \\[15pt] Alxébricas}
-} 
-node[
-midway,
-right=1cm,
-text width=6cm,
-align=left,
-magenta]
-{
-{\fontsize{45}{60} \selectfont \bf 2019 \\[15pt] 2020}
-};
-
-\node[align=center] at ($(current page.center)+(0,-9)$)
-{
-{\fontsize{13}{16} \selectfont \textbf{Héctor Varela Rodríguez} [hector.varela@rai.usc.es]}
-};
-
-\node[align=right, text width=8cm] at ($(current page.center)+(4,2)$)
-{
-{\fontsize{15}{20} \selectfont \bf Dobre Grao en Enxeñaría\\[10pt] Informática e Matemáticas}
-};
-
-\node at ($(current page.center)+(6,-13)$)
-{\includegraphics[scale=0.125]{USC-Logo.png}};
-
-\node[align=left] at ($(current page.center)+(-6.5,-13)$)
-{
-{\fontsize{9}{10} \selectfont \textbf{Profesores da materia:}}\\[3pt]
-\fontsize{9}{10} \selectfont Rosa María Fernández Rodríguez \\
-\fontsize{9}{10} \selectfont Antonio García Rodicio\\
-\fontsize{9}{10} \selectfont María Jesús Vale Gonsalves\\
-\fontsize{9}{10} \selectfont Pilar Páez Guillán
-};
-\end{tikzpicture}
-
-%------------------------------------------------------------------------------------%
-
-\clearpage % end title page
-\begingroup
-  \pagestyle{empty}
-  \null
-  \newpage
-\endgroup
 
 \tableofcontents
 
